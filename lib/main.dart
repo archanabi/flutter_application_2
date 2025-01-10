@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application_2/children%20growth%20app/splashscreen.dart';
 
-
-void main()  {
-
+void main() {
+  runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
@@ -12,19 +12,15 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Attendance App',
-     
-     
+      title: 'Flutter Demo',
       theme: ThemeData(
-       
+      
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home:(),
+      home: Splashscreen(),
       debugShowCheckedModeBanner: false,
     );
   }
-  
 }
 
-  

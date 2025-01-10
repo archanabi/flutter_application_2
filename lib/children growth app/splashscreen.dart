@@ -1,10 +1,9 @@
- import 'package:flutter/material.dart';
- import 'dart:async';
+import 'package:flutter/material.dart';
+import 'dart:async';
 
+import 'package:flutter_application_2/children%20growth%20app/cgm.dart';
 
-import 'package:flutter_application_2/childeren%20growth%20app/cgm.dart';
-import 'package:flutter_application_2/childeren%20growth%20app/changing%20cgm.dart';
- class Splashscreen extends StatefulWidget {
+class Splashscreen extends StatefulWidget {
   const Splashscreen({super.key});
 
   @override
@@ -15,8 +14,8 @@ class _SplashscreenState extends State<Splashscreen> {
     void initState(){
         super.initState();
          Timer(Duration(seconds: 3), () {
-      Navigator.push(context, 
-      MaterialPageRoute(builder: (context) => cgm()));
+      Navigator.pushReplacement(context, 
+      MaterialPageRoute(builder: (context) => ChildernGrowthCalculation()));
     });
     
     }
@@ -30,17 +29,9 @@ backgroundColor:const Color.fromARGB(255, 218, 113, 236),
       child: Column(
             children: [
               SizedBox(height: 230,),
-              Center(
-              
-                child: Image.asset('assets/images/splash.jpeg',
-                height: 100,
-                width: 200,
-                fit: BoxFit.cover,
-                ),
-              ),
               Padding(
                 padding: const EdgeInsets.all(8.0),
-                child: Text(" Child Growth",style: TextStyle(color: Colors.white,fontSize: 20.0,fontWeight: FontWeight.w800),),
+                child: Center(child: Text(" Child Growth",style: TextStyle(color: Colors.white,fontSize: 20.0,fontWeight: FontWeight.w800),)),
               ),
             ],
           ),
